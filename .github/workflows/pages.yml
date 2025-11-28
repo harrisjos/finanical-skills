@@ -1,10 +1,8 @@
-# Automatically build and deploy to GitHub Pages
-name: Deploy to GitHub Pages
+# Deploy static HTML site to GitHub Pages
+name: Deploy Static Site to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
     branches: [ main ]
 
 permissions:
