@@ -1,31 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Session 2 Slides - Freedom Financing</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/responsive.css">
     <style>
-        :root { --brand-purple: #6320A5; }
-        body { background-color: #f4f4f4; overflow: hidden; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .slide { display: none; height: 95vh; padding: 40px; overflow-y: auto; }
-        .active-slide { display: flex; flex-direction: column; justify-content: center; }
-        h1 { font-size: 4rem; color: var(--brand-purple); font-weight: 800; }
-        h2 { font-size: 3rem; color: #333; font-weight: 700; }
-        p, li { font-size: 2rem; line-height: 1.4; color: #444; }
-        .logo-header { position: fixed; top: 20px; left: 30px; height: 50px; z-index: 100; }
-        .nav-btn { position: fixed; bottom: 20px; z-index: 100; font-size: 1.5rem; padding: 15px 40px; border-radius: 50px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
-        #prevBtn { left: 30px; }
-        #nextBtn { right: 30px; background-color: var(--brand-purple); border: none; }
-        
+        :root {
+            --brand-purple: #6320A5;
+        }
+
+        body.ff-projector {
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+            overflow-y: auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        <style> :root {
+            --brand-purple: #6320A5;
+        }
+
+        body.ff-projector {
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+            overflow-y: auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body.ff-projector .slide {
+            display: none;
+            min-height: 85vh;
+            height: auto;
+            padding: clamp(1.5rem, 4vw, 2.75rem);
+            overflow-y: auto;
+        }
+
+        body.ff-projector .active-slide {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        body.ff-projector h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--brand-purple);
+            font-weight: 800;
+        }
+
+        body.ff-projector h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: #333;
+            font-weight: 700;
+        }
+
+        body.ff-projector p,
+        body.ff-projector li {
+            font-size: clamp(1.1rem, 2.2vw, 1.8rem);
+            line-height: 1.45;
+            color: #444;
+        }
+
+        body.ff-projector .logo-header {
+            position: fixed;
+            top: 20px;
+            left: 30px;
+            height: 50px;
+            z-index: 100;
+        }
+
+        body.ff-projector .nav-btn {
+            position: fixed;
+            bottom: 20px;
+            z-index: 100;
+            font-size: 1.5rem;
+            padding: 15px 40px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #prevBtn {
+            left: 30px;
+        }
+
+        #nextBtn {
+            right: 30px;
+            background-color: var(--brand-purple);
+            border: none;
+        }
+
         /* Visuals */
-        .big-number { font-size: 6rem; font-weight: 900; color: var(--brand-purple); }
-        .chart-box { height: 500px; background: white; border: 3px solid #ddd; position: relative; }
-        .bar-eric { background: #28a745; position: absolute; bottom: 0; left: 20%; width: 15%; transition: height 1s; }
-        .bar-luke { background: #6c757d; position: absolute; bottom: 0; right: 20%; width: 15%; transition: height 1s; }
+        .big-number {
+            font-size: 6rem;
+            font-weight: 900;
+            color: var(--brand-purple);
+        }
+
+        .chart-box {
+            height: 500px;
+            background: white;
+            border: 3px solid #ddd;
+            position: relative;
+        }
+
+        .bar-eric {
+            background: #28a745;
+            position: absolute;
+            bottom: 0;
+            left: 20%;
+            width: 15%;
+            transition: height 1s;
+        }
+
+        .bar-luke {
+            background: #6c757d;
+            position: absolute;
+            bottom: 0;
+            right: 20%;
+            width: 15%;
+            transition: height 1s;
+        }
+
+        @media (max-width: 768px) {
+            body.ff-projector .slide {
+                min-height: auto;
+                padding: 1.25rem;
+            }
+
+            body.ff-projector .logo-header {
+                position: static;
+                height: 48px;
+                margin: 0 auto 1rem;
+                left: initial;
+            }
+
+            body.ff-projector .nav-btn {
+                position: static;
+                width: 100%;
+                margin-top: 1rem;
+                font-size: 1.1rem;
+                border-radius: 0.75rem;
+            }
+
+            body.ff-projector h1 {
+                font-size: 2.4rem;
+            }
+
+            body.ff-projector h2 {
+                font-size: 1.9rem;
+            }
+
+            body.ff-projector p,
+            body.ff-projector li {
+                font-size: 1.2rem;
+            }
+
+            body.ff-projector .row>[class*='col-'] {
+                flex: 0 0 100%;
+                max-width: 100%;
+                margin-bottom: 1.5rem;
+            }
+        }
+    </style>
+    .big-number {
+    font-size: 6rem;
+    font-weight: 900;
+    color: var(--brand-purple);
+    }
+
+    .chart-box {
+    height: 500px;
+    background: white;
+    border: 3px solid #ddd;
+    position: relative;
+    }
+
+    .bar-eric {
+    background: #28a745;
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 15%;
+    transition: height 1s;
+    }
+
+    .bar-luke {
+    background: #6c757d;
+    position: absolute;
+    bottom: 0;
+    right: 20%;
+    width: 15%;
+    transition: height 1s;
+    }
     </style>
 </head>
-<body>
+
+<body class="ff-projector">
     <img src="../../assets/freedomfinancing.svg" alt="Logo" class="logo-header">
 
     <div class="slide active-slide text-center">
@@ -78,7 +250,8 @@
                 <div class="p-4 bg-secondary text-white rounded-pill display-5 fw-bold mt-4">$730,000</div>
             </div>
         </div>
-        <div class="mt-5 alert alert-primary display-6">Eric worked LESS but earned MORE. Why? <strong>TIME.</strong></div>
+        <div class="mt-5 alert alert-primary display-6">Eric worked LESS but earned MORE. Why? <strong>TIME.</strong>
+        </div>
     </div>
 
     <button id="prevBtn" class="btn btn-secondary nav-btn" onclick="changeSlide(-1)">Previous</button>
@@ -89,4 +262,5 @@
         function changeSlide(n) { currentSlide += n; if (currentSlide >= totalSlides) currentSlide = totalSlides - 1; if (currentSlide < 0) currentSlide = 0; showSlide(currentSlide); } showSlide(0);
     </script>
 </body>
+
 </html>
