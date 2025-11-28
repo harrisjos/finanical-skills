@@ -1,3 +1,20 @@
 theme: jekyll-theme-minimal
 title: Financial Skills Toolkit
 description: A comprehensive financial education resource series covering essential money management skills and wealth-building strategies.
+
+# GitHub Pages settings
+baseurl: "/finanical-skills"
+url: "https://harrisjos.github.io"
+
+# Navigation
+github:
+  repository_url: "https://github.com/harrisjos/finanical-skills"
+
+# Plugin settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# SEO
+author: Freedom Financing
+keywords: financial education, financial literacy, money management, wealth building, budgeting

@@ -1,0 +1,21 @@
+# Jekyll build files
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# VS Code
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Logs
+*.log
