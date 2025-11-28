@@ -2,6 +2,14 @@
 
 A comprehensive financial education resource series covering essential money management skills and wealth-building strategies.
 
+## 🚀 Deployment Instructions
+
+**Important:** To make this site live, you must configure GitHub Pages to use the provided workflow.
+
+1. Go to **Settings** > **Pages** in this repository.
+2. Under **Build and deployment** > **Source**, select **GitHub Actions**.
+3. The site will automatically deploy using the `static.yml` workflow.
+
 ## About
 
 This toolkit provides structured financial education materials designed for facilitators and includes:
