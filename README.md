@@ -37,6 +37,7 @@ This toolkit provides structured financial education materials designed for faci
 Visit the [live site](https://harrisjos.github.io/finanical-skills/) to access all materials.
 
 Each session includes:
+
 - **Facilitator Guide**: Detailed instructions for running the session
 - **Projector Materials**: Visual aids for group presentation
 - **Handouts**: Take-home materials and worksheets (where applicable)
