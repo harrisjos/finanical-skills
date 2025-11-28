@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 1 Slides - Freedom Financing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root { --brand-purple: #6320A5; --brand-white: #FFFFFF; }
+        body { background-color: #f4f4f4; overflow: hidden; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        /* Projector Optimization */
+        .slide { display: none; height: 95vh; padding: 40px; overflow-y: auto; }
+        .active-slide { display: flex; flex-direction: column; justify-content: center; }
+        h1 { font-size: 4rem; color: var(--brand-purple); font-weight: 800; }
+        h2 { font-size: 3rem; color: #333; font-weight: 700; }
+        p, li { font-size: 2rem; line-height: 1.4; color: #444; }
+        .logo-header { position: fixed; top: 20px; left: 30px; height: 50px; z-index: 100; }
+        /* Controls */
+        .nav-btn { position: fixed; bottom: 20px; z-index: 100; font-size: 1.5rem; padding: 15px 40px; border-radius: 50px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        #prevBtn { left: 30px; }
+        #nextBtn { right: 30px; background-color: var(--brand-purple); border: none; }
+        /* Custom Visuals */
+        .vs-badge { font-size: 3rem; font-weight: bold; padding: 20px 40px; border-radius: 20px; color: white; }
+        .bg-asset { background-color: #28a745; }
+        .bg-liability { background-color: #dc3545; }
+    </style>
+</head>
+<body>
+    <img src="/assets/freedomfinancing.svg" alt="Logo" class="logo-header">
+
+    <div class="slide active-slide text-center">
+        <h2 class="text-muted text-uppercase ls-2">Session 1</h2>
+        <h1>THE WEALTH MINDSET</h1>
+        <p class="mt-4">Assets vs. Liabilities</p>
+        <div class="mt-5">
+            <span class="vs-badge bg-asset me-3">RICH</span>
+            <span class="vs-badge bg-liability">BROKE</span>
+        </div>
+    </div>
+
+    <div class="slide">
+        <h2>THE TALE OF TWO APPRENTICES</h2>
+        <div class="row mt-5">
+            <div class="col-6 text-center border-end border-3">
+                <h3 class="text-danger fw-bold display-5">Flashy Phil</h3>
+                <ul class="text-start mt-4 d-inline-block">
+                    <li>$70k Ranger (Financed)</li>
+                    <li>Newest iPhone</li>
+                    <li>Buys lunch daily</li>
+                    <li>Looks Rich</li>
+                </ul>
+                <div class="mt-4 p-3 bg-danger text-white rounded-pill h3">NET WORTH: -$50k</div>
+            </div>
+            <div class="col-6 text-center">
+                <h3 class="text-success fw-bold display-5">Smart Sam</h3>
+                <ul class="text-start mt-4 d-inline-block">
+                    <li>Older Hilux (Paid off)</li>
+                    <li>Owns Quality Tools</li>
+                    <li>Invests $100/wk</li>
+                    <li>Looks Average</li>
+                </ul>
+                <div class="mt-4 p-3 bg-success text-white rounded-pill h3">NET WORTH: +$30k</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <h2>THE DEFINITION</h2>
+        <div class="row mt-5">
+            <div class="col-12 mb-5">
+                <div class="d-flex align-items-center p-5 bg-white rounded shadow-sm border-start border-success border-5">
+                    <div class="vs-badge bg-asset me-5">ASSET</div>
+                    <p class="m-0 display-6">Puts money <strong>IN</strong> your pocket.<br><small class="text-muted">(Tools, Investments, Skills)</small></p>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="d-flex align-items-center p-5 bg-white rounded shadow-sm border-start border-danger border-5">
+                    <div class="vs-badge bg-liability me-5">LIABILITY</div>
+                    <p class="m-0 display-6">Takes money <strong>OUT</strong> of your pocket.<br><small class="text-muted">(Car loans, subscriptions, toys)</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide text-center">
+        <h1>GAME: TOOLBOX OR TRASH?</h1>
+        <p>Asset or Liability?</p>
+        <div class="row mt-5">
+            <div class="col-4 mb-4"><div class="p-4 bg-white shadow-sm rounded border">A Jet Ski</div></div>
+            <div class="col-4 mb-4"><div class="p-4 bg-white shadow-sm rounded border">Milwaukee Impact Driver</div></div>
+            <div class="col-4 mb-4"><div class="p-4 bg-white shadow-sm rounded border">$5,000 Gaming PC</div></div>
+            <div class="col-4"><div class="p-4 bg-white shadow-sm rounded border">Investment Property</div></div>
+            <div class="col-4"><div class="p-4 bg-white shadow-sm rounded border">Uber Eats App</div></div>
+            <div class="col-4"><div class="p-4 bg-white shadow-sm rounded border">Your ABN</div></div>
+        </div>
+    </div>
+
+    <div class="slide text-center">
+        <h1>THE HOMEWORK</h1>
+        <div class="alert alert-warning d-inline-block p-5 mt-5 shadow">
+            <p class="display-5 fw-bold m-0">The Rule of Thumb:</p>
+            <hr>
+            <p class="display-6">For every 'Toy' (Liability) you buy,<br> put an equal amount of cash into an 'Asset'.</p>
+        </div>
+    </div>
+
+    <button id="prevBtn" class="btn btn-secondary nav-btn" onclick="changeSlide(-1)">Previous</button>
+    <button id="nextBtn" class="btn btn-primary nav-btn" onclick="changeSlide(1)">Next</button>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active-slide'));
+            slides[n].classList.add('active-slide');
+            document.getElementById('prevBtn').disabled = (n === 0);
+            document.getElementById('nextBtn').disabled = (n === totalSlides - 1);
+        }
+        function changeSlide(n) {
+            currentSlide += n;
+            if (currentSlide >= totalSlides) currentSlide = totalSlides - 1;
+            if (currentSlide < 0) currentSlide = 0;
+            showSlide(currentSlide);
+        }
+        showSlide(0); // Init
+    </script>
+</body>
+</html>

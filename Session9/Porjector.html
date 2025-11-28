@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 9 Slides - Freedom Financing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --brand-purple: #6320A5;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .slide {
+            display: none;
+            height: 95vh;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        .active-slide {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 4rem;
+            color: var(--brand-purple);
+            font-weight: 800;
+        }
+
+        h2 {
+            font-size: 3rem;
+            color: #333;
+            font-weight: 700;
+        }
+
+        p,
+        li {
+            font-size: 2rem;
+            line-height: 1.4;
+            color: #444;
+        }
+
+        .logo-header {
+            position: fixed;
+            top: 20px;
+            left: 30px;
+            height: 50px;
+            z-index: 100;
+        }
+
+        .nav-btn {
+            position: fixed;
+            bottom: 20px;
+            z-index: 100;
+            font-size: 1.5rem;
+            padding: 15px 40px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #prevBtn {
+            left: 30px;
+        }
+
+        #nextBtn {
+            right: 30px;
+            background-color: var(--brand-purple);
+            border: none;
+        }
+
+        /* Visuals */
+        .receipt-item {
+            font-size: 2.5rem;
+            border-bottom: 2px dashed #ccc;
+            padding: 15px 0;
+        }
+
+        .price-reveal {
+            font-weight: bold;
+            color: var(--brand-purple);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="/assets/freedomfinancing.svg" alt="Logo" class="logo-header">
+
+    <div class="slide active-slide text-center">
+        <h2 class="text-muted text-uppercase ls-2">Session 9</h2>
+        <h1>MOVING OUT</h1>
+        <p class="mt-4">The Real Cost of Freedom</p>
+    </div>
+
+    <div class="slide text-center">
+        <h2>THE $4,000 DOORWAY</h2>
+        <p class="lead">Walking through your own front door costs money before you even sleep there.</p>
+        <div class="row mt-5 justify-content-center">
+            <div class="col-8 text-start p-5 bg-white shadow border fw-bold font-monospace">
+                <p class="mb-3">Bond (4 Weeks): ~$2,000</p>
+                <p class="mb-3">Rent in Advance: ~$1,000</p>
+                <p class="mb-3">Connections/Van: ~$500</p>
+                <p class="mb-3">Fridge/Bed (Used): ~$1,000</p>
+                <hr>
+                <p class="display-4 text-danger">TOTAL: ~$4,500</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <h2 class="text-center">THE RENTAL APPLICATION</h2>
+        <p class="lead text-center">It's a competition. Agents check 3 things:</p>
+        <div class="row mt-5">
+            <div class="col-4 text-center">
+                <div class="p-4 bg-white shadow rounded h-100">
+                    <h1>💵</h1>
+                    <h3>Can you pay?</h3>
+                    <p>(Payslips)</p>
+                </div>
+            </div>
+            <div class="col-4 text-center">
+                <div class="p-4 bg-white shadow rounded h-100">
+                    <h1>📈</h1>
+                    <h3>Will you pay?</h3>
+                    <p>(Credit Score / Ledger)</p>
+                </div>
+            </div>
+            <div class="col-4 text-center">
+                <div class="p-4 bg-white shadow rounded h-100">
+                    <h1>🤝</h1>
+                    <h3>Will you wreck it?</h3>
+                    <p>(References)</p>
+                </div>
+            </div>
+        </div>
+        <p class="text-center mt-5 fw-bold">The 30% Rule: Rent shouldn't be more than 30% of income.</p>
+    </div>
+
+    <div class="slide text-center">
+        <h1>GAME: THE REALITY RECEIPT</h1>
+        <p class="lead mb-5">Guess the boring monthly costs.</p>
+        <div class="row justify-content-center font-monospace text-start">
+            <div class="col-8 bg-white shadow p-5">
+                <div class="receipt-item d-flex justify-content-between"><span>Electricity (2ppl):</span><span
+                        class="price-reveal">$150 - $200 / mo</span></div>
+                <div class="receipt-item d-flex justify-content-between"><span>NBN Internet:</span><span
+                        class="price-reveal">~$80 / mo</span></div>
+                <div class="receipt-item d-flex justify-content-between"><span>Block of Cheese (1kg):</span><span
+                        class="price-reveal">~$14.00</span></div>
+                <div class="receipt-item d-flex justify-content-between"><span>Groceries (1 person):</span><span
+                        class="price-reveal">~$600 / mo</span></div>
+                <p class="text-center mt-4 text-danger fw-bold">Running a house costs $300+/wk before rent.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide text-center">
+        <h1>STRATEGIC PATIENCE</h1>
+        <div class="alert alert-primary d-inline-block p-5 mt-5 shadow border-primary border-5">
+            <p class="display-5">Don't move out just to look cool.</p>
+            <hr>
+            <p class="display-5">Every year you stay at home (if possible) is a</p>
+            <p class="display-3 fw-bold">$15,000 HEAD START</p>
+            <p class="fs-2">on your house deposit or business setup.</p>
+        </div>
+    </div>
+
+    <button id="prevBtn" class="btn btn-secondary nav-btn" onclick="changeSlide(-1)">Previous</button>
+    <button id="nextBtn" class="btn btn-primary nav-btn" onclick="changeSlide(1)">Next</button>
+    <script>
+        let currentSlide = 0; const slides = document.querySelectorAll('.slide'); const totalSlides = slides.length;
+        function showSlide(n) { slides.forEach(slide => slide.classList.remove('active-slide')); slides[n].classList.add('active-slide'); document.getElementById('prevBtn').disabled = (n === 0); document.getElementById('nextBtn').disabled = (n === totalSlides - 1); }
+        function changeSlide(n) { currentSlide += n; if (currentSlide >= totalSlides) currentSlide = totalSlides - 1; if (currentSlide < 0) currentSlide = 0; showSlide(currentSlide); } showSlide(0);
+    </script>
+</body>
+
+</html>

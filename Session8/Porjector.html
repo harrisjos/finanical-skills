@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 8 Slides - Freedom Financing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root { --brand-purple: #6320A5; }
+        body { background-color: #f4f4f4; overflow: hidden; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .slide { display: none; height: 95vh; padding: 40px; overflow-y: auto; }
+        .active-slide { display: flex; flex-direction: column; justify-content: center; }
+        h1 { font-size: 4rem; color: var(--brand-purple); font-weight: 800; }
+        h2 { font-size: 3rem; color: #333; font-weight: 700; }
+        p, li { font-size: 2rem; line-height: 1.4; color: #444; }
+        .logo-header { position: fixed; top: 20px; left: 30px; height: 50px; z-index: 100; }
+        .nav-btn { position: fixed; bottom: 20px; z-index: 100; font-size: 1.5rem; padding: 15px 40px; border-radius: 50px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        #prevBtn { left: 30px; }
+        #nextBtn { right: 30px; background-color: var(--brand-purple); border: none; }
+        
+        /* Visuals */
+        .shock-number { font-size: 8rem; font-weight: 900; color: white; line-height: 1; }
+        .shock-label { font-size: 2.5rem; color: #eee; }
+    </style>
+</head>
+<body>
+    <img src="/assets/freedomfinancing.svg" alt="Logo" class="logo-header">
+
+    <div class="slide active-slide text-center">
+        <h2 class="text-muted text-uppercase ls-2">Session 8</h2>
+        <h1>THE CHAINSAW</h1>
+        <p class="mt-4">Credit Cards & BNPL: Tool or Trap?</p>
+    </div>
+
+    <div class="slide text-center">
+        <h2>THE BANK'S FAVOURITE CUSTOMER</h2>
+        <div class="row mt-5 justify-content-center">
+             <div class="col-5 border-end">
+                 <h3>Customer A ("The Deadbeat")</h3>
+                 <p>Pays card in full every month. Gets free flights. Pays $0 interest.</p>
+                 <span class="badge bg-success p-3 fs-4">Bank hates them.</span>
+             </div>
+             <div class="col-5">
+                 <h3>Customer B ("The Cash Cow")</h3>
+                 <p>Makes the <strong>Minimum Repayment</strong> every month.</p>
+                 <span class="badge bg-danger p-3 fs-4">Bank loves them.</span>
+             </div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="row h-75">
+            <div class="col-6 mb-4">
+                <div class="h-100 p-5 bg-white shadow border-start border-primary border-5">
+                    <h1 class="text-primary">THE TOOL (Credit Card)</h1>
+                    <ul class="mt-5">
+                        <li><strong>Pros:</strong> Up to 55 days interest-free. Use bank's money for cash flow. Rewards.</li>
+                        <li><strong>The Trap:</strong> 20% Interest if you miss the date by one day.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-6 mb-4">
+                <div class="h-100 p-5 bg-white shadow border-start border-danger border-5">
+                    <h1 class="text-danger">THE LEECH (BNPL)</h1>
+                    <ul class="mt-5">
+                        <li><strong>The Trap:</strong> "Death by a thousand cuts."</li>
+                        <li>Micro-payments ($20 here, $50 there) strangle your weekly cash flow.</li>
+                        <li>Banks hate seeing it on loan apps.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide text-center bg-danger">
+        <h1 class="text-white border-bottom border-white pb-4">THE $5,000 MISTAKE</h1>
+        <p class="text-white display-6">You bought a Gaming PC/Bike on a credit card (18%).<br>You only make the <strong>Minimum Repayment</strong>.</p>
+        <div class="row mt-5">
+            <div class="col-4 border-end border-white">
+                <div class="shock-number">33</div>
+                <div class="shock-label">YEARS to pay off</div>
+            </div>
+            <div class="col-4 border-end border-white">
+                <div class="shock-number">$12k</div>
+                <div class="shock-label">INTEREST Paid</div>
+            </div>
+            <div class="col-4">
+                <div class="shock-number">$17k</div>
+                <div class="shock-label">TOTAL COST</div>
+            </div>
+        </div>
+        <p class="text-white fs-2 mt-5">By the time you pay it off, you'll be 50 and the PC will be junk.</p>
+    </div>
+
+    <div class="slide text-center">
+        <h1>THE GOLDEN RULE</h1>
+        <div class="alert alert-success d-inline-block p-5 mt-5 shadow border-success border-5">
+            <p class="display-5">If you can't pay cash for it <strong>right now</strong>,</p>
+            <hr>
+            <p class="display-4 fw-bold">Don't put it on credit.</p>
+            <p class="fs-2 mt-4">Set up "Auto-Pay Full Balance" on credit cards, or cut them up.</p>
+        </div>
+    </div>
+
+    <button id="prevBtn" class="btn btn-secondary nav-btn" onclick="changeSlide(-1)">Previous</button>
+    <button id="nextBtn" class="btn btn-primary nav-btn" onclick="changeSlide(1)">Next</button>
+    <script>
+        let currentSlide = 0; const slides = document.querySelectorAll('.slide'); const totalSlides = slides.length;
+        function showSlide(n) { slides.forEach(slide => slide.classList.remove('active-slide')); slides[n].classList.add('active-slide'); document.getElementById('prevBtn').disabled = (n === 0); document.getElementById('nextBtn').disabled = (n === totalSlides - 1); }
+        function changeSlide(n) { currentSlide += n; if (currentSlide >= totalSlides) currentSlide = totalSlides - 1; if (currentSlide < 0) currentSlide = 0; showSlide(currentSlide); } showSlide(0);
+    </script>
+</body>
+</html>

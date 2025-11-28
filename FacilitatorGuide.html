@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freedom Financing - Financial Toolkit Series</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --brand-purple: #6320A5;
+            --brand-white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+
+        /* Branding Overrides */
+        .text-brand { color: var(--brand-purple) !important; }
+        .bg-brand { background-color: var(--brand-purple) !important; color: white !important; }
+        .border-brand { border-color: var(--brand-purple) !important; }
+
+        /* Logo Sizing */
+        .logo-img {
+            max-height: 80px;
+            max-width: 300px;
+            width: auto;
+        }
+
+        /* Handout Styling for Handwriting inputs */
+        .handwriting-input {
+            border: none;
+            border-bottom: 2px solid #000;
+            background: transparent;
+            width: 100%;
+            display: inline-block;
+            height: 30px;
+        }
+        
+        .handwriting-input-short {
+            width: 80px;
+            text-align: center;
+        }
+
+        /* Print Specifics */
+        @media print {
+            body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .page-break { break-before: page; }
+            .no-print { display: none !important; }
+            
+            /* Ensure Bootstrap Backgrounds Print */
+            .bg-brand { background-color: var(--brand-purple) !important; color: white !important; }
+            
+            /* Remove shadows for cleaner print */
+            .card { border: 1px solid #000; box-shadow: none !important; }
+            
+            /* Adjust margins */
+            .container { max-width: 100% !important; }
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <div class="container bg-white shadow-sm my-4 p-5">
+        
+        <div class="d-flex justify-content-between align-items-center border-bottom border-brand border-3 pb-3 mb-4">
+            <div>
+                <img src="assets/freedomfinancing.svg" alt="Freedom Financing Logo" class="logo-img mb-2">
+                <h1 class="h3 text-uppercase text-brand fw-bold m-0">Facilitator Guide</h1>
+                <p class="text-muted m-0">The Financial Toolkit Series</p>
+            </div>
+            <div class="text-end">
+                <p class="mb-0"><strong>Target:</strong> VCE VM (Year 11 & 12)</p>
+                <p class="mb-0"><strong>Location:</strong> Victoria, AU</p>
+            </div>
+        </div>
+
+        <h2 class="h4 text-brand fw-bold mt-4 mb-3">Master Schedule</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead class="bg-brand">
+                    <tr>
+                        <th class="bg-brand">#</th>
+                        <th class="bg-brand">Topic</th>
+                        <th class="bg-brand">Core Concept</th>
+                        <th class="bg-brand">Interactive Element</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><th>1</th><td>The Wealth Mindset</td><td>Assets vs. Liabilities</td><td>"Toolbox or Trash?" Game</td></tr>
+                    <tr><th>2</th><td>The 8th Wonder</td><td>Compound Interest</td><td>"The Time Machine" Graph</td></tr>
+                    <tr><th>3</th><td>Employee vs. Boss</td><td>TFN vs. ABN</td><td>"Who Pays?" Scenario</td></tr>
+                    <tr><th>4</th><td>The Paycheck Reality</td><td>Reading a Payslip</td><td>"The Payslip Detective"</td></tr>
+                    <tr><th>5</th><td>Banking Like a CEO</td><td>The Bucket System</td><td>"The Salary Split"</td></tr>
+                    <tr><th>6</th><td>The Adult Report Card</td><td>Credit Scores</td><td>"Up, Down, or Bomb?"</td></tr>
+                    <tr><th>7</th><td>Good vs. Bad Debt</td><td>Depreciation & Deductions</td><td>"The $50k Showdown"</td></tr>
+                    <tr><th>8</th><td>The Chainsaw</td><td>Credit Cards & BNPL</td><td>Repayment Calculator</td></tr>
+                    <tr><th>9</th><td>Moving Out</td><td>Rental Costs & Reality</td><td>"The Reality Receipt"</td></tr>
+                    <tr><th>10</th><td>The Side Hustle</td><td>Pricing & Business Basics</td><td>"Quote the Job"</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card mb-4 border-0">
+            <div class="card-header bg-light border-start border-brand border-5">
+                <h3 class="h5 m-0 fw-bold">Phase 1: The Vision (Mindset)</h3>
+            </div>
+            <div class="card-body">
+                <h5 class="fw-bold text-brand">Session 1: The Wealth Mindset</h5>
+                <ul class="mb-3">
+                    <li><strong>Hook:</strong> "Flashy Phil vs. Smart Sam."</li>
+                    <li><strong>Concept:</strong> Assets put money IN. Liabilities take money OUT.</li>
+                </ul>
+
+                <h5 class="fw-bold text-brand">Session 2: The 8th Wonder</h5>
+                <ul class="mb-3">
+                    <li><strong>Hook:</strong> "The Servo Tax" ($10/day = $112k lost).</li>
+                    <li><strong>Concept:</strong> Compound Interest (The Snowball).</li>
+                </ul>
+
+                <h5 class="fw-bold text-brand">Session 3: Employee vs. Boss</h5>
+                <ul>
+                    <li><strong>Hook:</strong> "Friday Rich vs. Tuesday Poor."</li>
+                    <li><strong>Concept:</strong> TFN (Safety) vs ABN (Freedom + Tax Risk).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card mb-4 border-0">
+            <div class="card-header bg-light border-start border-brand border-5">
+                <h3 class="h5 m-0 fw-bold">Phase 2: The Mechanics (Control)</h3>
+            </div>
+            <div class="card-body">
+                <h5 class="fw-bold text-brand">Session 4: The Paycheck Reality</h5>
+                <ul class="mb-3">
+                    <li><strong>Hook:</strong> "The Missing $300."</li>
+                    <li><strong>Concept:</strong> Victorian Awards, Allowances, Super (12%).</li>
+                </ul>
+
+                <h5 class="fw-bold text-brand">Session 5: Banking Like a CEO</h5>
+                <ul class="mb-3">
+                    <li><strong>Hook:</strong> "The One-Bucket Disaster."</li>
+                    <li><strong>Concept:</strong> Blow / Bills / Future buckets.</li>
+                </ul>
+
+                <h5 class="fw-bold text-brand">Session 6: The Adult Report Card</h5>
+                <ul>
+                    <li><strong>Hook:</strong> "Computer Says No."</li>
+                    <li><strong>Concept:</strong> Credit Scores (0-1000) & Enquiries.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card mb-4 border-0">
+            <div class="card-header bg-light border-start border-brand border-5">
+                <h3 class="h5 m-0 fw-bold">Phase 3: Leverage & Logistics (Action)</h3>
+            </div>
+            <div class="card-body">
+                <h5 class="fw-bold text-brand">Session 7: Good vs. Bad Debt</h5>
+                <ul class="mb-3">
+                    <li><strong>Hook:</strong> "The most expensive smell in the world (New Car)."</li>
+                    <li><strong>Concept:</strong> Depreciation vs Deductions.</li>
+                </ul>
+
+                <h5 class="fw-bold text-brand">Session 8: The Chainsaw</h5>
+                <ul class="mb-3">
+                    <li><strong>Hook:</strong> "The Bank's Favourite Customer."</li>
+                    <li><strong>Concept:</strong> Credit Cards (Tool vs Trap) & BNPL.</li>
+                </ul>
+
+                <h5 class="fw-bold text-brand">Session 9: Moving Out</h5>
+                <ul class="mb-3">
+                    <li><strong>Hook:</strong> "The $4,000 Doorway."</li>
+                    <li><strong>Concept:</strong> Rental Competition & The 30% Rule.</li>
+                </ul>
+
+                <h5 class="fw-bold text-brand">Session 10: The Side Hustle</h5>
+                <ul>
+                    <li><strong>Hook:</strong> "Saturday Morning Cash."</li>
+                    <li><strong>Concept:</strong> Pricing for Profit (Markup + Labor + Overheads).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="page-break"></div>
+
+    <div class="container bg-white shadow-sm my-4 p-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <img src="assets/freedomfinancing.svg" alt="Logo" class="logo-img">
+            <div class="text-end">
+                <h2 class="h3 fw-bold text-brand">HANDOUT</h2>
+                <span class="badge bg-secondary">Session 4: Payslips</span>
+            </div>
+        </div>
+
+        <div class="card border-dark mb-4">
+            <div class="card-header bg-dark text-white d-flex justify-content-between">
+                <span><strong>EMPLOYER:</strong> BuildRight Constructions</span>
+                <span><strong>PERIOD:</strong> 14/11/2025 – 20/11/2025</span>
+            </div>
+            <div class="card-body font-monospace">
+                <p><strong>EMPLOYEE:</strong> Tom Tradie (2nd Year Apprentice)</p>
+                
+                <h6 class="border-bottom pb-2 mt-3 fw-bold">1. EARNINGS</h6>
+                <table class="table table-sm table-borderless">
+                    <thead><tr class="border-bottom"><th>Description</th><th>Rate</th><th>Units</th><th class="text-end">Total</th></tr></thead>
+                    <tbody>
+                        <tr><td>Ordinary Hours</td><td>$22.00</td><td>38.00</td><td class="text-end">$836.00</td></tr>
+                        <tr><td>Saturday Shift</td><td>$22.00</td><td>4.00</td><td class="text-end">$88.00</td></tr>
+                        <tr><td>Tool Allowance</td><td>$20.00</td><td>1.00</td><td class="text-end">$20.00</td></tr>
+                        <tr><td>Travel Allowance</td><td>$18.50</td><td>3.00</td><td class="text-end">$55.50</td></tr>
+                        <tr><td>Site Allowance</td><td>$4.50</td><td>38.00</td><td class="text-end">$171.00</td></tr>
+                        <tr class="border-top fw-bold"><td>TOTAL GROSS</td><td></td><td></td><td class="text-end">$1,170.50</td></tr>
+                    </tbody>
+                </table>
+
+                <h6 class="border-bottom pb-2 mt-3 fw-bold">2. DEDUCTIONS</h6>
+                <table class="table table-sm table-borderless">
+                    <tbody>
+                        <tr><td>PAYG Withholding</td><td class="text-end">-$212.00</td></tr>
+                        <tr><td>Union Fees</td><td class="text-end">-$15.00</td></tr>
+                        <tr class="border-top fw-bold"><td>TOTAL DEDUCTIONS</td><td class="text-end">-$227.00</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="alert alert-light border border-dark text-end fw-bold fs-4">
+                    NET PAY: $943.50
+                </div>
+
+                <p class="small text-muted">SUPERANNUATION: Rate: 10.00% | Amount: $117.05</p>
+            </div>
+        </div>
+
+        <h4 class="text-brand fw-bold mb-3">The Challenge:</h4>
+        <p class="lead">Tom worked Mon-Fri + 4 hours Saturday.<br>He drove his own car for 5 days.<br>Find the 3 mistakes costing him money.</p>
+        
+        <div class="mt-4">
+            <p class="mb-4">1. <span class="handwriting-input"></span></p>
+            <p class="mb-4">2. <span class="handwriting-input"></span></p>
+            <p class="mb-4">3. <span class="handwriting-input"></span></p>
+        </div>
+    </div>
+
+
+    <div class="page-break"></div>
+
+    <div class="container bg-white shadow-sm my-4 p-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <img src="assets/freedomfinancing.svg" alt="Logo" class="logo-img">
+            <div class="text-end">
+                <h2 class="h3 fw-bold text-brand">QUOTE WORKSHEET</h2>
+                <span class="badge bg-secondary">Session 10: Side Hustle</span>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-6">
+                <label class="form-label fw-bold">Your Business Name:</label>
+                <div class="handwriting-input"></div>
+            </div>
+            <div class="col-6">
+                <label class="form-label fw-bold">Client Name:</label>
+                <div class="handwriting-input"></div>
+            </div>
+        </div>
+
+        <div class="card mb-4 border-dark">
+            <div class="card-header bg-brand text-white fw-bold">STEP 1: MATERIALS (+ 15% Markup)</div>
+            <div class="card-body">
+                <div class="row align-items-end mb-2">
+                    <div class="col-4"><strong>Item</strong></div>
+                    <div class="col-3 text-center"><strong>Cost Price</strong></div>
+                    <div class="col-2 text-center"><strong>Markup</strong></div>
+                    <div class="col-3 text-end"><strong>Client Price</strong></div>
+                </div>
+                <div class="row align-items-end mb-2">
+                    <div class="col-4">Timber/Hardware</div>
+                    <div class="col-3 text-center">$ <span class="handwriting-input handwriting-input-short"></span></div>
+                    <div class="col-2 text-center">+ 15%</div>
+                    <div class="col-3 text-end">$ <span class="handwriting-input handwriting-input-short"></span></div>
+                </div>
+                <div class="row align-items-end mb-3">
+                    <div class="col-4">Consumables</div>
+                    <div class="col-3 text-center">$ <span class="handwriting-input handwriting-input-short"></span></div>
+                    <div class="col-2 text-center">+ 15%</div>
+                    <div class="col-3 text-end">$ <span class="handwriting-input handwriting-input-short"></span></div>
+                </div>
+                <div class="text-end fw-bold">
+                    Total Materials (A): $ <span class="handwriting-input handwriting-input-short"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4 border-dark">
+            <div class="card-header bg-brand text-white fw-bold">STEP 2: LABOR (Your Time)</div>
+            <div class="card-body">
+                <div class="row align-items-end mb-2">
+                    <div class="col-5"><strong>Task</strong></div>
+                    <div class="col-2 text-center"><strong>Hours</strong></div>
+                    <div class="col-2 text-center"><strong>Rate</strong></div>
+                    <div class="col-3 text-end"><strong>Total</strong></div>
+                </div>
+                <div class="row align-items-end mb-2">
+                    <div class="col-5">Site Prep & Build</div>
+                    <div class="col-2 text-center"><span class="handwriting-input handwriting-input-short" style="width:40px"></span> hrs</div>
+                    <div class="col-2 text-center">x $ <span class="handwriting-input handwriting-input-short" style="width:40px"></span></div>
+                    <div class="col-3 text-end">$ <span class="handwriting-input handwriting-input-short"></span></div>
+                </div>
+                <div class="text-end fw-bold">
+                    Total Labor (B): $ <span class="handwriting-input handwriting-input-short"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-brand bg-light">
+            <div class="card-body">
+                <h4 class="fw-bold text-center text-brand mb-4">FINAL QUOTE CALCULATION</h4>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Materials (A):</span>
+                            <span>$ <span class="handwriting-input handwriting-input-short"></span></span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Labor (B):</span>
+                            <span>$ <span class="handwriting-input handwriting-input-short"></span></span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Overheads:</span>
+                            <span>$ <span class="handwriting-input handwriting-input-short"></span></span>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="h4 fw-bold text-brand">TOTAL:</span>
+                            <span class="h2 fw-bold text-brand">$ <span class="handwriting-input" style="width: 150px;"></span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-5 text-center">
+            <div class="handwriting-input" style="width: 50%;"></div>
+            <p class="text-muted mt-1">Signed (CEO of You Inc)</p>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="container bg-white shadow-sm my-4 p-5">
+        <h2 class="text-center text-brand fw-bold mb-4">Facilitator Answer Key</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-header bg-dark text-white fw-bold">Payslip Answers</div>
+                    <div class="card-body">
+                        <ol>
+                            <li class="mb-3"><strong>Saturday Rate:</strong> Listed as ordinary ($22). Should be 1.5x or 2.0x. <br><span class="text-danger">Cost: ~$44.00</span></li>
+                            <li class="mb-3"><strong>Travel Allowance:</strong> Listed as 3 units. He worked 5 days. <br><span class="text-danger">Cost: ~$37.00</span></li>
+                            <li><strong>Superannuation:</strong> Listed as 10%. Statutory rate is 12%.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-header bg-dark text-white fw-bold">Quote Example</div>
+                    <div class="card-body">
+                        <ul>
+                            <li class="mb-2"><strong>Materials:</strong> $150 + 15% ($22.50) = <strong>$172.50</strong></li>
+                            <li class="mb-2"><strong>Labor:</strong> 4 hrs x $40 = <strong>$160.00</strong></li>
+                            <li class="mb-2"><strong>Total Estimate:</strong> <strong>$332.50</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

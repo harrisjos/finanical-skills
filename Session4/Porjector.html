@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 4 Slides - Freedom Financing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root { --brand-purple: #6320A5; }
+        body { background-color: #f4f4f4; overflow: hidden; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .slide { display: none; height: 95vh; padding: 40px; overflow-y: auto; }
+        .active-slide { display: flex; flex-direction: column; justify-content: center; }
+        h1 { font-size: 4rem; color: var(--brand-purple); font-weight: 800; }
+        h2 { font-size: 3rem; color: #333; font-weight: 700; }
+        p, li { font-size: 2rem; line-height: 1.4; color: #444; }
+        .logo-header { position: fixed; top: 20px; left: 30px; height: 50px; z-index: 100; }
+        .nav-btn { position: fixed; bottom: 20px; z-index: 100; font-size: 1.5rem; padding: 15px 40px; border-radius: 50px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        #prevBtn { left: 30px; }
+        #nextBtn { right: 30px; background-color: var(--brand-purple); border: none; }
+        
+        /* Payslip Visuals */
+        .payslip-container { background: white; border: 4px solid #333; padding: 30px; font-family: monospace; }
+        .highlight-box { border: 4px solid red; padding: 10px; background: rgba(255,0,0,0.1); }
+        .payslip-table th { background: #ddd; font-size: 1.5rem; }
+        .payslip-table td { font-size: 1.8rem; }
+    </style>
+</head>
+<body>
+    <img src="/assets/freedomfinancing.svg" alt="Logo" class="logo-header">
+
+    <div class="slide active-slide text-center">
+        <h2 class="text-muted text-uppercase ls-2">Session 4</h2>
+        <h1>THE PAYCHECK REALITY</h1>
+        <p class="mt-4">Gross vs Net: Where did my money go?</p>
+    </div>
+
+    <div class="slide">
+        <h2>THE MISSING $300</h2>
+        <div class="row mt-5 align-items-center justify-content-center">
+             <div class="col-8 text-center">
+                 <p class="display-5">You calculated in your head:</p>
+                 <div class="p-4 bg-white border shadow-sm display-4 fw-bold mb-4">$1,125 (Gross)</div>
+                 <p class="display-5">The bank notification said:</p>
+                 <div class="p-4 bg-white border shadow-sm display-4 fw-bold text-danger">$860 (Net)</div>
+             </div>
+        </div>
+        <p class="text-center mt-4">You didn't lose it. It was "processed".</p>
+    </div>
+
+    <div class="slide">
+        <h2>ANATOMY OF A TRADIE PAYSLIP</h2>
+        <div class="payslip-container shadow mt-4">
+            <div class="row">
+                <div class="col-8">
+                    <h3 class="mb-4">1. EARNINGS & ALLOWANCES (The Good Stuff)</h3>
+                    <ul class="fs-3">
+                        <li>Base Hourly Rate</li>
+                        <li>Overtime (1.5x / 2.0x)</li>
+                        <li class="fw-bold text-primary">Tool Allowance</li>
+                        <li class="fw-bold text-primary">Travel/Fares Allowance</li>
+                        <li class="fw-bold text-primary">Site Allowance</li>
+                    </ul>
+                </div>
+                <div class="col-4 border-start">
+                    <h3 class="mb-4">2. DEDUCTIONS (The Tax Man)</h3>
+                    <ul class="fs-3 text-danger">
+                        <li>PAYG Tax Withheld</li>
+                        <li>Union Fees</li>
+                    </ul>
+                    <hr>
+                    <h3 class="mb-4 mt-4">3. SUPER (The Ghost Money)</h3>
+                    <p class="fs-3">12% Paid ON TOP. Not deducted from Gross.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide text-center">
+        <h1>ACTIVITY: PAYSLIP DETECTIVE</h1>
+        <p class="lead">Look at your handout.</p>
+        <div class="row mt-5 justify-content-center">
+            <div class="col-8">
+                <div class="alert alert-danger p-5 shadow">
+                    <h3 class="display-5 fw-bold">THE 3 MISTAKES:</h3>
+                    <ol class="text-start display-6 mt-4">
+                        <li class="mb-4">Saturday Rate was Ordinary ($22). Should be 1.5x ($33).</li>
+                        <li class="mb-4">Travel Allowance was 3 days. Should be 5 days.</li>
+                        <li>Superannuation was 10%. Should be 12%.</li>
+                    </ol>
+                </div>
+                <p class="display-5 fw-bold mt-4">Total Lost This Week: ~$81.00</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide text-center">
+        <h1>THE 3-SECOND CHECK</h1>
+        <div class="alert alert-success d-inline-block p-5 mt-5 shadow border-success border-5">
+            <p class="display-6">Every Thursday night, check these 3 things:</p>
+            <hr>
+            <ol class="text-start display-5 fw-bold" style="display: inline-block;">
+                <li class="mb-3">Hours (Did I get my overtime?)</li>
+                <li class="mb-3">Allowances (Did I get travel for every day?)</li>
+                <li>Super (Is there a $ amount next to it?)</li>
+            </ol>
+        </div>
+    </div>
+
+    <button id="prevBtn" class="btn btn-secondary nav-btn" onclick="changeSlide(-1)">Previous</button>
+    <button id="nextBtn" class="btn btn-primary nav-btn" onclick="changeSlide(1)">Next</button>
+    <script>
+        let currentSlide = 0; const slides = document.querySelectorAll('.slide'); const totalSlides = slides.length;
+        function showSlide(n) { slides.forEach(slide => slide.classList.remove('active-slide')); slides[n].classList.add('active-slide'); document.getElementById('prevBtn').disabled = (n === 0); document.getElementById('nextBtn').disabled = (n === totalSlides - 1); }
+        function changeSlide(n) { currentSlide += n; if (currentSlide >= totalSlides) currentSlide = totalSlides - 1; if (currentSlide < 0) currentSlide = 0; showSlide(currentSlide); } showSlide(0);
+    </script>
+</body>
+</html>
