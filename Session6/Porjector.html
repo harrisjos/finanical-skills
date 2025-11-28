@@ -1,29 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Session 6 Slides - Freedom Financing</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        :root { --brand-purple: #6320A5; }
-        body { background-color: #f4f4f4; overflow: hidden; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .slide { display: none; height: 95vh; padding: 40px; overflow-y: auto; }
-        .active-slide { display: flex; flex-direction: column; justify-content: center; }
-        h1 { font-size: 4rem; color: var(--brand-purple); font-weight: 800; }
-        h2 { font-size: 3rem; color: #333; font-weight: 700; }
-        p, li { font-size: 2rem; line-height: 1.4; color: #444; }
-        .logo-header { position: fixed; top: 20px; left: 30px; height: 50px; z-index: 100; }
-        .nav-btn { position: fixed; bottom: 20px; z-index: 100; font-size: 1.5rem; padding: 15px 40px; border-radius: 50px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
-        #prevBtn { left: 30px; }
-        #nextBtn { right: 30px; background-color: var(--brand-purple); border: none; }
-        
+        :root {
+            --brand-purple: #6320A5;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .slide {
+            display: none;
+            height: 95vh;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        .active-slide {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 4rem;
+            color: var(--brand-purple);
+            font-weight: 800;
+        }
+
+        h2 {
+            font-size: 3rem;
+            color: #333;
+            font-weight: 700;
+        }
+
+        p,
+        li {
+            font-size: 2rem;
+            line-height: 1.4;
+            color: #444;
+        }
+
+        .logo-header {
+            position: fixed;
+            top: 20px;
+            left: 30px;
+            height: 50px;
+            z-index: 100;
+        }
+
+        .nav-btn {
+            position: fixed;
+            bottom: 20px;
+            z-index: 100;
+            font-size: 1.5rem;
+            padding: 15px 40px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #prevBtn {
+            left: 30px;
+        }
+
+        #nextBtn {
+            right: 30px;
+            background-color: var(--brand-purple);
+            border: none;
+        }
+
         /* Score Visuals */
-        .score-gauge { height: 300px; background: linear-gradient(to right, #dc3545, #ffc107, #28a745); border-radius: 150px 150px 0 0; position: relative; margin: 50px auto; width: 600px; }
-        .score-needle { position: absolute; bottom: 0; left: 50%; width: 5px; height: 280px; background: #333; transform-origin: bottom center; transform: rotate(-45deg); transition: transform 1s; }
-        .game-table td { font-size: 2.2rem; padding: 25px; }
+        .score-gauge {
+            height: 300px;
+            background: linear-gradient(to right, #dc3545, #ffc107, #28a745);
+            border-radius: 150px 150px 0 0;
+            position: relative;
+            margin: 50px auto;
+            width: 600px;
+        }
+
+        .score-needle {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 5px;
+            height: 280px;
+            background: #333;
+            transform-origin: bottom center;
+            transform: rotate(-45deg);
+            transition: transform 1s;
+        }
+
+        .game-table td {
+            font-size: 2.2rem;
+            padding: 25px;
+        }
     </style>
 </head>
+
 <body>
     <img src="/assets/freedomfinancing.svg" alt="Logo" class="logo-header">
 
@@ -36,12 +118,13 @@
     <div class="slide text-center">
         <h2>"COMPUTER SAYS NO"</h2>
         <div class="row mt-5 justify-content-center">
-             <div class="col-8">
-                 <p class="display-5">Imagine you find the perfect Ute. You have the deposit. You earn good money.</p>
-                 <p class="display-5 mt-4">The finance guy types your name in...</p>
-                 <div class="p-5 bg-danger text-white shadow-sm rounded d-inline-block mt-4 display-2 fw-bold">DECLINED</div>
-                 <p class="fs-2 mt-4">Why? That $200 phone bill you ignored when you were 18.</p>
-             </div>
+            <div class="col-8">
+                <p class="display-5">Imagine you find the perfect Ute. You have the deposit. You earn good money.</p>
+                <p class="display-5 mt-4">The finance guy types your name in...</p>
+                <div class="p-5 bg-danger text-white shadow-sm rounded d-inline-block mt-4 display-2 fw-bold">DECLINED
+                </div>
+                <p class="fs-2 mt-4">Why? That $200 phone bill you ignored when you were 18.</p>
+            </div>
         </div>
     </div>
 
@@ -52,17 +135,25 @@
         </div>
         <div class="row justify-content-center" style="width: 600px; margin: 0 auto;">
             <div class="col-4 text-danger fw-bold">RED ZONE<br>(No Loans)</div>
-            <div class="col-4 text-warning fw-bold" style="color: #fd7e14 !important;">AMBER ZONE<br>(High Interest)</div>
+            <div class="col-4 text-warning fw-bold" style="color: #fd7e14 !important;">AMBER ZONE<br>(High Interest)
+            </div>
             <div class="col-4 text-success fw-bold">GREEN ZONE<br>(Banks want you)</div>
         </div>
         <div class="row mt-5">
             <div class="col-6 border-end">
                 <h3>WHAT BUILDS IT?</h3>
-                <ul class="text-start d-inline-block"><li>Paying on time</li><li>Stability (Same job/address)</li></ul>
+                <ul class="text-start d-inline-block">
+                    <li>Paying on time</li>
+                    <li>Stability (Same job/address)</li>
+                </ul>
             </div>
             <div class="col-6">
                 <h3>WHAT KILLS IT?</h3>
-                <ul class="text-start d-inline-block"><li>Missed Payments (14+ days)</li><li>Defaults (The 5-year curse)</li><li><strong>Shopping Around</strong></li></ul>
+                <ul class="text-start d-inline-block">
+                    <li>Missed Payments (14+ days)</li>
+                    <li>Defaults (The 5-year curse)</li>
+                    <li><strong>Shopping Around</strong></li>
+                </ul>
             </div>
         </div>
     </div>
@@ -96,7 +187,8 @@
         <div class="alert alert-primary d-inline-block p-5 mt-5 shadow border-primary border-5">
             <p class="display-4 fw-bold">STOP CLICKING "APPLY" ONLINE.</p>
             <hr>
-            <p class="display-5">Every time you apply online, it leaves a footprint on your file. Too many footprints = desperate.</p>
+            <p class="display-5">Every time you apply online, it leaves a footprint on your file. Too many footprints =
+                desperate.</p>
             <p class="fs-2 mt-4">Talk to a broker first. We can check without ruining your score.</p>
         </div>
     </div>
@@ -109,4 +201,5 @@
         function changeSlide(n) { currentSlide += n; if (currentSlide >= totalSlides) currentSlide = totalSlides - 1; if (currentSlide < 0) currentSlide = 0; showSlide(currentSlide); } showSlide(0);
     </script>
 </body>
+
 </html>

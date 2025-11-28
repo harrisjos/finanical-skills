@@ -1,29 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Session 5 Slides - Freedom Financing</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        :root { --brand-purple: #6320A5; }
-        body { background-color: #f4f4f4; overflow: hidden; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .slide { display: none; height: 95vh; padding: 40px; overflow-y: auto; }
-        .active-slide { display: flex; flex-direction: column; justify-content: center; }
-        h1 { font-size: 4rem; color: var(--brand-purple); font-weight: 800; }
-        h2 { font-size: 3rem; color: #333; font-weight: 700; }
-        p, li { font-size: 2rem; line-height: 1.4; color: #444; }
-        .logo-header { position: fixed; top: 20px; left: 30px; height: 50px; z-index: 100; }
-        .nav-btn { position: fixed; bottom: 20px; z-index: 100; font-size: 1.5rem; padding: 15px 40px; border-radius: 50px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
-        #prevBtn { left: 30px; }
-        #nextBtn { right: 30px; background-color: var(--brand-purple); border: none; }
-        
+        :root {
+            --brand-purple: #6320A5;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .slide {
+            display: none;
+            height: 95vh;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        .active-slide {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 4rem;
+            color: var(--brand-purple);
+            font-weight: 800;
+        }
+
+        h2 {
+            font-size: 3rem;
+            color: #333;
+            font-weight: 700;
+        }
+
+        p,
+        li {
+            font-size: 2rem;
+            line-height: 1.4;
+            color: #444;
+        }
+
+        .logo-header {
+            position: fixed;
+            top: 20px;
+            left: 30px;
+            height: 50px;
+            z-index: 100;
+        }
+
+        .nav-btn {
+            position: fixed;
+            bottom: 20px;
+            z-index: 100;
+            font-size: 1.5rem;
+            padding: 15px 40px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #prevBtn {
+            left: 30px;
+        }
+
+        #nextBtn {
+            right: 30px;
+            background-color: var(--brand-purple);
+            border: none;
+        }
+
         /* Barefoot Visuals */
-        .bucket-card { height: 100%; border-width: 0; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        .bucket-icon { font-size: 4rem; margin-bottom: 20px; }
-        .bucket-percentage { font-size: 3rem; font-weight: 900; position: absolute; top: 10px; right: 20px; opacity: 0.2; }
+        .bucket-card {
+            height: 100%;
+            border-width: 0;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .bucket-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .bucket-percentage {
+            font-size: 3rem;
+            font-weight: 900;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            opacity: 0.2;
+        }
     </style>
 </head>
+
 <body>
     <img src="assets/freedomfinancing.svg" alt="Logo" class="logo-header">
 
@@ -36,18 +113,20 @@
     <div class="slide text-center">
         <h2>THE "ONE-BUCKET" DISASTER</h2>
         <div class="row mt-5 justify-content-center">
-             <div class="col-8">
-                 <p class="display-5">Wages go in. Maccas comes out. Bills come out.</p>
-                 <div class="p-5 bg-white border border-danger border-5 shadow-sm rounded-circle d-inline-block mt-4" style="width: 400px; height: 400px; display: flex; align-items: center; justify-content: center;">
-                     <div>
+            <div class="col-8">
+                <p class="display-5">Wages go in. Maccas comes out. Bills come out.</p>
+                <div class="p-5 bg-white border border-danger border-5 shadow-sm rounded-circle d-inline-block mt-4"
+                    style="width: 400px; height: 400px; display: flex; align-items: center; justify-content: center;">
+                    <div>
                         <span class="display-3">🏦</span>
                         <h3>ONE ACCOUNT</h3>
                         <p class="text-muted">"Savings? Whatever is left."</p>
-                     </div>
-                 </div>
-             </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p class="text-center mt-4 fw-bold text-danger">If your savings and beer money are in the same bucket, you have no savings.</p>
+        <p class="text-center mt-4 fw-bold text-danger">If your savings and beer money are in the same bucket, you have
+            no savings.</p>
     </div>
 
     <div class="slide text-center">
@@ -108,7 +187,7 @@
     <div class="slide text-center">
         <h2>EXAMPLE: THE $800 WAGE</h2>
         <p class="lead">You get paid <strong>$800</strong> (Net) on Thursday. Here is the split.</p>
-        
+
         <div class="row mt-4 justify-content-center">
             <div class="col-10">
                 <table class="table table-bordered bg-white shadow" style="font-size: 2rem;">
@@ -137,9 +216,10 @@
                 </table>
             </div>
         </div>
-        
+
         <div class="alert alert-success mt-4 d-inline-block">
-            <strong>Result:</strong> You save <strong>$8,320 a year</strong> (Fire) + have <strong>$4,160 for a holiday</strong> (Smile).
+            <strong>Result:</strong> You save <strong>$8,320 a year</strong> (Fire) + have <strong>$4,160 for a
+                holiday</strong> (Smile).
         </div>
     </div>
 
@@ -150,7 +230,8 @@
             <hr>
             <p class="display-6">You need <strong>$2,000</strong> in a separate, hard-to-access account.</p>
             <h2 class="fw-bold text-brand mt-4" style="font-size: 4rem;">"MOJO"</h2>
-            <p class="fs-3 mt-4">This is for emergencies only (Car blow up, lose job). <br>It gives you the confidence to say "No" to bad bosses.</p>
+            <p class="fs-3 mt-4">This is for emergencies only (Car blow up, lose job). <br>It gives you the confidence
+                to say "No" to bad bosses.</p>
         </div>
     </div>
 
@@ -162,4 +243,5 @@
         function changeSlide(n) { currentSlide += n; if (currentSlide >= totalSlides) currentSlide = totalSlides - 1; if (currentSlide < 0) currentSlide = 0; showSlide(currentSlide); } showSlide(0);
     </script>
 </body>
+
 </html>

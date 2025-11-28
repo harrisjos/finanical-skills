@@ -1,30 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Session 4 Slides - Freedom Financing</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        :root { --brand-purple: #6320A5; }
-        body { background-color: #f4f4f4; overflow: hidden; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .slide { display: none; height: 95vh; padding: 40px; overflow-y: auto; }
-        .active-slide { display: flex; flex-direction: column; justify-content: center; }
-        h1 { font-size: 4rem; color: var(--brand-purple); font-weight: 800; }
-        h2 { font-size: 3rem; color: #333; font-weight: 700; }
-        p, li { font-size: 2rem; line-height: 1.4; color: #444; }
-        .logo-header { position: fixed; top: 20px; left: 30px; height: 50px; z-index: 100; }
-        .nav-btn { position: fixed; bottom: 20px; z-index: 100; font-size: 1.5rem; padding: 15px 40px; border-radius: 50px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
-        #prevBtn { left: 30px; }
-        #nextBtn { right: 30px; background-color: var(--brand-purple); border: none; }
-        
+        :root {
+            --brand-purple: #6320A5;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .slide {
+            display: none;
+            height: 95vh;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        .active-slide {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 4rem;
+            color: var(--brand-purple);
+            font-weight: 800;
+        }
+
+        h2 {
+            font-size: 3rem;
+            color: #333;
+            font-weight: 700;
+        }
+
+        p,
+        li {
+            font-size: 2rem;
+            line-height: 1.4;
+            color: #444;
+        }
+
+        .logo-header {
+            position: fixed;
+            top: 20px;
+            left: 30px;
+            height: 50px;
+            z-index: 100;
+        }
+
+        .nav-btn {
+            position: fixed;
+            bottom: 20px;
+            z-index: 100;
+            font-size: 1.5rem;
+            padding: 15px 40px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #prevBtn {
+            left: 30px;
+        }
+
+        #nextBtn {
+            right: 30px;
+            background-color: var(--brand-purple);
+            border: none;
+        }
+
         /* Payslip Visuals */
-        .payslip-container { background: white; border: 4px solid #333; padding: 30px; font-family: monospace; }
-        .highlight-box { border: 4px solid red; padding: 10px; background: rgba(255,0,0,0.1); }
-        .payslip-table th { background: #ddd; font-size: 1.5rem; }
-        .payslip-table td { font-size: 1.8rem; }
+        .payslip-container {
+            background: white;
+            border: 4px solid #333;
+            padding: 30px;
+            font-family: monospace;
+        }
+
+        .highlight-box {
+            border: 4px solid red;
+            padding: 10px;
+            background: rgba(255, 0, 0, 0.1);
+        }
+
+        .payslip-table th {
+            background: #ddd;
+            font-size: 1.5rem;
+        }
+
+        .payslip-table td {
+            font-size: 1.8rem;
+        }
     </style>
 </head>
+
 <body>
     <img src="/assets/freedomfinancing.svg" alt="Logo" class="logo-header">
 
@@ -37,12 +114,12 @@
     <div class="slide">
         <h2>THE MISSING $300</h2>
         <div class="row mt-5 align-items-center justify-content-center">
-             <div class="col-8 text-center">
-                 <p class="display-5">You calculated in your head:</p>
-                 <div class="p-4 bg-white border shadow-sm display-4 fw-bold mb-4">$1,125 (Gross)</div>
-                 <p class="display-5">The bank notification said:</p>
-                 <div class="p-4 bg-white border shadow-sm display-4 fw-bold text-danger">$860 (Net)</div>
-             </div>
+            <div class="col-8 text-center">
+                <p class="display-5">You calculated in your head:</p>
+                <div class="p-4 bg-white border shadow-sm display-4 fw-bold mb-4">$1,125 (Gross)</div>
+                <p class="display-5">The bank notification said:</p>
+                <div class="p-4 bg-white border shadow-sm display-4 fw-bold text-danger">$860 (Net)</div>
+            </div>
         </div>
         <p class="text-center mt-4">You didn't lose it. It was "processed".</p>
     </div>
@@ -114,4 +191,5 @@
         function changeSlide(n) { currentSlide += n; if (currentSlide >= totalSlides) currentSlide = totalSlides - 1; if (currentSlide < 0) currentSlide = 0; showSlide(currentSlide); } showSlide(0);
     </script>
 </body>
+
 </html>
