@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 10 Handouts - Freedom Financing (V2)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../assets/responsive.css">
+    <style>
+        :root {
+            --brand-purple: #6320A5;
+            --brand-white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+
+        .text-brand {
+            color: var(--brand-purple) !important;
+        }
+
+        .bg-brand {
+            background-color: var(--brand-purple) !important;
+            color: white !important;
+        }
+
+        .border-brand {
+            border-color: var(--brand-purple) !important;
+        }
+
+        .logo-img {
+            max-height: 80px;
+            max-width: 300px;
+            width: auto;
+        }
+
+        .handwriting-input {
+            border: none;
+            border-bottom: 2px solid #000;
+            background: transparent;
+            width: 100%;
+            display: inline-block;
+            height: 30px;
+        }
+
+        .handwriting-input-short {
+            width: 80px;
+            text-align: center;
+        }
+
+        .vote-box {
+            display: inline-block;
+            width: 38px;
+            height: 38px;
+            border: 2px solid #333;
+            border-radius: 6px;
+            text-align: center;
+            line-height: 34px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            vertical-align: middle;
+            margin-right: 4px;
+        }
+
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .page-break {
+                break-before: page;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            .bg-brand {
+                background-color: var(--brand-purple) !important;
+                color: white !important;
+            }
+
+            .card {
+                border: 1px solid #000;
+                box-shadow: none !important;
+            }
+
+            .container {
+                max-width: 100% !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <!-- ══════════════════════════════════════════════ -->
+    <!-- PAGE 1: ORIGINAL Quote Worksheet               -->
+    <!-- ══════════════════════════════════════════════ -->
+    <div class="container bg-white shadow-sm my-4 p-5 ff-shell">
+        <div class="d-flex justify-content-between align-items-center mb-4 ff-header">
+            <a href="../../../index.html" class="no-print"><img src="../../../assets/freedomfinancing.svg" alt="Logo"
+                    class="logo-img ff-logo"></a>
+            <div class="text-end">
+                <h2 class="h3 fw-bold text-brand">QUOTE WORKSHEET</h2>
+                <span class="badge bg-secondary">Session 10: Side Hustle</span>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-6">
+                <label class="form-label fw-bold">Your Business Name:</label>
+                <div class="handwriting-input"></div>
+            </div>
+            <div class="col-6">
+                <label class="form-label fw-bold">Client Name:</label>
+                <div class="handwriting-input"></div>
+            </div>
+        </div>
+
+        <div class="card mb-4 border-dark">
+            <div class="card-header bg-brand text-white fw-bold">STEP 1: MATERIALS (+ 15% Markup)</div>
+            <div class="card-body">
+                <div class="row align-items-end mb-2">
+                    <div class="col-4"><strong>Item</strong></div>
+                    <div class="col-3 text-center"><strong>Cost Price</strong></div>
+                    <div class="col-2 text-center"><strong>Markup</strong></div>
+                    <div class="col-3 text-end"><strong>Client Price</strong></div>
+                </div>
+                <div class="row align-items-end mb-2">
+                    <div class="col-4">Timber/Hardware</div>
+                    <div class="col-3 text-center">$ <span class="handwriting-input handwriting-input-short"></span>
+                    </div>
+                    <div class="col-2 text-center">+ 15%</div>
+                    <div class="col-3 text-end">$ <span class="handwriting-input handwriting-input-short"></span></div>
+                </div>
+                <div class="row align-items-end mb-3">
+                    <div class="col-4">Consumables</div>
+                    <div class="col-3 text-center">$ <span class="handwriting-input handwriting-input-short"></span>
+                    </div>
+                    <div class="col-2 text-center">+ 15%</div>
+                    <div class="col-3 text-end">$ <span class="handwriting-input handwriting-input-short"></span></div>
+                </div>
+                <div class="text-end fw-bold">
+                    Total Materials (A): $ <span class="handwriting-input handwriting-input-short"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4 border-dark">
+            <div class="card-header bg-brand text-white fw-bold">STEP 2: LABOR (Your Time)</div>
+            <div class="card-body">
+                <div class="row align-items-end mb-2">
+                    <div class="col-5"><strong>Task</strong></div>
+                    <div class="col-2 text-center"><strong>Hours</strong></div>
+                    <div class="col-2 text-center"><strong>Rate</strong></div>
+                    <div class="col-3 text-end"><strong>Total</strong></div>
+                </div>
+                <div class="row align-items-end mb-2">
+                    <div class="col-5">Site Prep &amp; Build</div>
+                    <div class="col-2 text-center"><span class="handwriting-input handwriting-input-short"
+                            style="width:40px"></span> hrs</div>
+                    <div class="col-2 text-center">x $ <span class="handwriting-input handwriting-input-short"
+                            style="width:40px"></span></div>
+                    <div class="col-3 text-end">$ <span class="handwriting-input handwriting-input-short"></span></div>
+                </div>
+                <div class="text-end fw-bold">
+                    Total Labor (B): $ <span class="handwriting-input handwriting-input-short"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-brand bg-light">
+            <div class="card-body">
+                <h4 class="fw-bold text-center text-brand mb-4">FINAL QUOTE CALCULATION</h4>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Materials (A):</span>
+                            <span>$ <span class="handwriting-input handwriting-input-short"></span></span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Labor (B):</span>
+                            <span>$ <span class="handwriting-input handwriting-input-short"></span></span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Overheads:</span>
+                            <span>$ <span class="handwriting-input handwriting-input-short"></span></span>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="h4 fw-bold text-brand">TOTAL:</span>
+                            <span class="h2 fw-bold text-brand">$ <span class="handwriting-input"
+                                    style="width: 150px;"></span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5 text-center">
+            <div class="handwriting-input" style="width: 50%;"></div>
+            <p class="text-muted mt-1">Signed (CEO of You Inc)</p>
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════ -->
+    <!-- PAGE 2 (V2 ADDITION): Cash Jobs Reflection     -->
+    <!-- ══════════════════════════════════════════════ -->
+    <div class="page-break"></div>
+
+    <div class="container bg-white shadow-sm my-4 p-5 ff-shell">
+        <div
+            class="d-flex justify-content-between align-items-center border-bottom border-brand border-3 pb-3 mb-4 ff-header">
+            <a href="../../../index.html" class="no-print"><img src="../../../assets/freedomfinancing.svg" alt="Logo"
+                    class="logo-img ff-logo"></a>
+            <div class="text-end">
+                <h2 class="h3 fw-bold text-brand">REALITY CHECK</h2>
+                <span class="badge bg-secondary">Session 10: The Cash Jobs Question</span>
+            </div>
+        </div>
+
+        <!-- Student Info -->
+        <div class="row mb-4">
+            <div class="col-6">
+                <label class="form-label fw-bold">Name:</label>
+                <div class="handwriting-input"></div>
+            </div>
+            <div class="col-6">
+                <label class="form-label fw-bold">Date:</label>
+                <div class="handwriting-input"></div>
+            </div>
+        </div>
+
+        <!-- Scenario -->
+        <div class="card border-dark mb-4">
+            <div class="card-header bg-dark text-white fw-bold">THE SCENARIO</div>
+            <div class="card-body">
+                <p class="mb-1"><strong>Jake</strong> is a 3rd-year apprentice electrician. On weekends he does side
+                    jobs — resi rewires, fan installs, power points. He earns around <strong>$800/week cash</strong> on
+                    top of his apprenticeship wage of <strong>$700/week</strong>.</p>
+                <p class="mb-0">Jake doesn't declare the cash. He figures it's easier that way.</p>
+            </div>
+        </div>
+
+        <!-- Question 1 -->
+        <p class="fw-bold mb-1">1. Jake wants to buy a house in 3 years. His total real income is $1,500/wk
+            ($78,000/yr). But the bank can only see $700/wk ($36,400/yr). What problem does this create?</p>
+        <div class="handwriting-input mb-1"></div>
+        <div class="handwriting-input mb-4"></div>
+
+        <!-- Question 2 -->
+        <p class="fw-bold mb-1">2. Jake also wants to buy a $15,000 van to grow his business. What will the bank's
+            decision likely be based on his declared income? What could he do differently?</p>
+        <div class="handwriting-input mb-1"></div>
+        <div class="handwriting-input mb-4"></div>
+
+        <!-- Question 3 -->
+        <p class="fw-bold mb-1">3. The ATO sends Jake a letter. They've noticed his bank deposits are much higher than
+            his declared income. He owes $24,000 in back-taxes, interest, and penalties. Where did this figure
+            likely come from?</p>
+        <div class="handwriting-input mb-1"></div>
+        <div class="handwriting-input mb-4"></div>
+
+        <!-- Question 4 -->
+        <p class="fw-bold mb-2">4. For each statement, circle AGREE or DISAGREE — then explain why:</p>
+
+        <div class="card mb-3 border-secondary">
+            <div class="card-body">
+                <p class="fw-bold mb-2">"Declaring my income means I just pay more tax — I'm worse off."</p>
+                <div class="mb-2">
+                    <span class="vote-box">AGREE</span>
+                    <span class="vote-box">DISAGREE</span>
+                </div>
+                <div class="handwriting-input mb-1"></div>
+                <div class="handwriting-input"></div>
+            </div>
+        </div>
+
+        <div class="card mb-3 border-secondary">
+            <div class="card-body">
+                <p class="fw-bold mb-2">"Paying tax is just the government taking money that's rightfully mine."</p>
+                <div class="mb-2">
+                    <span class="vote-box">AGREE</span>
+                    <span class="vote-box">DISAGREE</span>
+                </div>
+                <div class="handwriting-input mb-1"></div>
+                <div class="handwriting-input"></div>
+            </div>
+        </div>
+
+        <!-- Takeaway -->
+        <div class="alert alert-warning mt-4">
+            <h5 class="fw-bold mb-1">Your Takeaway</h5>
+            <p class="mb-1">Complete this sentence:</p>
+            <p class="mb-2">"When I start my own business, I will declare my income because..."</p>
+            <div class="handwriting-input mb-1"></div>
+            <div class="handwriting-input"></div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
