@@ -117,6 +117,33 @@
             padding: 12px 16px;
         }
 
+        @media print {
+            @page {
+                size: A4 landscape;
+                margin: 0.4in;
+            }
+
+            .nav-btn {
+                display: none !important;
+            }
+
+            body.ff-projector .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                height: calc(210mm - 0.8in);
+                overflow: hidden;
+                page-break-after: always;
+                break-after: page;
+                box-shadow: none !important;
+                margin: 0 !important;
+            }
+
+            body.ff-projector {
+                background: white !important;
+            }
+        }
+
         @media (max-width: 768px) {
             body.ff-projector .slide {
                 min-height: auto;
